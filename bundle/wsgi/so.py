@@ -328,7 +328,7 @@ class SOD(service_orchestrator.Decision, threading.Thread):
                                 key = BUNDLE_DIR + myparameters.MIGRATION_KEY
                                 ssh.connect(self.so_e.influxdb_ip, username=myparameters.MIGRATION_USERNAME, key_filename=key)
                                 Tmovedata_start=time.time()
-                                command='cd '+myparameters.MIGRATION_SCRIPT_FOLDER+'; bash '+myparameters.MIGRATION_SCRIPT_NAME+' '+ip_old
+                                command='cd '+myparameters.MIGRATION_SCRIPT_FOLDER+'; bash '+myparameters.MIGRATION_SCRIPT_NAME+' '+self.so_e.influxdb_ip_old
                                 stdin, stdout, stderr = ssh.exec_command(command)
                                 print "Script output", stdout.readlines()
                                 ssh.close()
