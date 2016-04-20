@@ -1,0 +1,3 @@
+https://dl.dropboxusercontent.com/u/165239/mcn_cc_sdk.tgz
+https://github.com/AleDanish/sm-0.4/archive/master.zip
+flask
